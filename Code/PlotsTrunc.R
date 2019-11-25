@@ -1,11 +1,14 @@
 ################################################################################
 library(colorspace)
-  Type <- c("Int",rep("Focal",10),rep("Alter",11),rep("Dyadic",7))
+  Type <- c("Int",rep("Focal",8),rep("Alter",9),rep("Dyadic",6))
   
   IDs <- c("Int",
-         "Age","Male","Indigenous","Cant Work","Grip Strength","Education","Physical Attractiveness","Depressed","Food Insecure","Material Wealth",  
-         "Age","Male","Indigenous","Cant Work","Grip Strength","Education","Physical Attractiveness","Depressed","Food Insecure","Material Wealth","Out Migrated", 
-         "Relatedness","Same Ethnicity","Friends","Same Community","Married","Same Sex","Reciprocation")
+         "Age","Male","Indigenous","Cant Work","Grip Strength","Depressed","Food Insecure","Material Wealth",  
+         "Age","Male","Indigenous","Cant Work","Grip Strength","Depressed","Food Insecure","Material Wealth","Out Migrated", 
+         "Relatedness","Same Ethnicity","Friends","Married","Same Sex","Reciprocation")
+
+
+
 
 ################################################################################
 BG<-rstan::extract(fit_Trunc,pars="BG")$BG

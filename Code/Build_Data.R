@@ -335,23 +335,15 @@ SameEthnicity=A_SameEthnicity,
 Other=ifelse(A_Self==1,0,1),
 Relatedness=A_Kin*2,
 Friends=A_Friends,
-Community=A_Community,
 Marriage=A_Married,
 
 Age=DD$Age/max(DD$Age,na.rm=TRUE),                      
 Male=ifelse(DD$Sex=="M",1,0),                       
-Mar=ifelse(DD$Married=="Yes",1,0),
 CantWork=ifelse(DD$AbilityToWork=="Full",0,1),
-Status=ifelse(DD$Status=="Yes",1,0),
-BMI=BMI/max(BMI,na.rm=TRUE),
 Grip=Grip/max(Grip,na.rm=TRUE),
-Edu=Edu/max(Edu,na.rm=TRUE),
-PA=PA/max(PA,na.rm=TRUE),
 Sad=Sad,
-Poor=ifelse(DD$PoorRelativeCommunity=="YES",1,0),
 NoFood=ifelse(DD$DaysWithoutSufficientFood>0,1,0),
 GoodsValues=DD$GoodsValues/max(DD$GoodsValues,na.rm=TRUE),
-IncomeMonthly=DD$IncomeMonthly/max(DD$IncomeMonthly,na.rm=TRUE),
 Indigenous=ifelse(DD$Ethnicity=="EMBERA",1,0),
 NotThere=DD$NotThere,
 MissingFocal=MissingFocal
@@ -360,7 +352,7 @@ MissingFocal=MissingFocal
                                       
 rm(list=setdiff(ls(), c("model_dat_Coast")))
 save.image("ColombianDataWithImputations.RData")
-
+rm(list=ls(all=TRUE))
 
 
 
