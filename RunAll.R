@@ -24,7 +24,7 @@ load("ColombianDataWithImputations.RData") # Loads anonymized and rescaled
                                                  # data with hard-coded
                                                  # imputations of missings
                                                                             
-source("Code/PlotNetworks.R")    
+# source("Code/PlotNetworks.R") # Note that this file is run on private database # Code is included here for review, but may not run 
 
 ################################### Model data with standard multinomial outcome
 iter <- 2000
